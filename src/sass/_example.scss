@@ -1,0 +1,252 @@
+body {
+  height: 100%;
+  margin: 0;
+  // background-color: #F9F0DA;
+  padding-bottom: 20px;
+  background: linear-gradient(45deg, #FEAC5E, #C779D0, #4BC0C8);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.container {
+  width: 1530px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.search-form {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  margin: 0 auto;
+  background-color: #A3D0C3;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.search-form input {
+  position: relative;
+  width: 300px;
+  height: 42px;
+  padding-left: 20px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #7BA7AB;
+}
+
+.search-form button {
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #7BA7AB;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+
+  &:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #F9F0DA;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9F0DA;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A3D0C3;
+  border-radius: 8px;
+  border: 4px solid #F9F0DA;
+}
+
+.welcome-info {
+  color: #A3D0C3;
+  text-align: center;
+  padding-top: 150px;
+  font-family: 'Kaushan Script';
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-head {
+  margin-bottom: 30px;
+  font-size: 100px;
+}
+
+.welcome-text {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.welcome-list__item {
+  margin-bottom: 5px;
+}
+
+.welcome-list__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #A3D0C3;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: color 150ms linear;
+
+  &:hover {
+    color: #7BA7AB;
+  }
+}
+
+.welcome-list__link-git {
+  &::before {
+    content: "\f09b";
+    font-family: FontAwesome;
+    font-size: 25px;
+    color: #A3D0C3;
+    margin-right: 10px;
+  }
+}
+
+.welcome-list__link-inst {
+  &::before {
+    content: "\f16d";
+    font-family: FontAwesome;
+    font-size: 25px;
+    color: #A3D0C3;
+    margin-right: 10px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 75px;
+  justify-content: center;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.photo-card {
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #A3D0C3;
+  display: inline-block;
+  width: 345px;
+  height: 300px;
+  background-size: cover;
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+  transition: transform 150ms linear,
+    background 150ms linear;
+
+  border: 2px solid #A3D0C3;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #7BA7AB;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.info {
+  color: #F9F0DA;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 15px;
+  margin-top: 16px;
+}
+
+.info-item {
+  font-size: 18px;
+  font-family: 'Sriracha', cursive;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.load-more {
+  color: #F9F0DA;
+  margin-top: 10px;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  background-color: #A3D0C3;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: background 150ms linear;
+
+  &:hover {
+    background-color: #7BA7AB;
+  }
+
+  &:after {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    content: "\f03e";
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #F9F0DA;
+  }
+}
+
+.load-more>span {
+  font-family: 'Sriracha', cursive;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  margin-right: 10px;
+}
+
+.is-hidden {
+  display: none;
+}
