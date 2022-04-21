@@ -8,6 +8,7 @@ export function lightbox() {
     captionDelay: 250,
     disableRightClick: true,
     scrollZoom: false,
+    overlayOpacity: 0.3,
   }));
 }
 
