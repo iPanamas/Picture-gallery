@@ -1,7 +1,6 @@
+html,
 body {
-  height: 100%;
   margin: 0;
-  // background-color: #F9F0DA;
   padding-bottom: 20px;
   background: linear-gradient(45deg, #FEAC5E, #C779D0, #4BC0C8);
   background-size: 400% 400%;
@@ -9,27 +8,39 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
 
-li {
-  list-style-type: none;
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-// @keyframes gradient {
-//   0% {
-//     background-position: 0 50%;
-//   }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-//   50% {
-//     background-position: 100% 50%;
-//   }
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
 
-//   100% {
-//     background-position: 0 50%;
-//   }
-// }
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
 
 .container {
   width: 1530px;
@@ -100,7 +111,8 @@ li {
   text-align: center;
   padding-top: 150px;
   font-family: 'Kaushan Script';
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 70px;
 }
 
 .welcome-head {
@@ -110,52 +122,14 @@ li {
 
 .welcome-text {
   font-size: 40px;
-  margin-bottom: 30px;
-}
 
-.welcome-list__item {
-  margin-bottom: 5px;
-}
-
-.welcome-list__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  color: #A3D0C3;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  transition: color 150ms linear;
-
-  &:hover {
-    color: #7BA7AB;
-  }
-}
-
-.welcome-list__link-git {
-  &::before {
-    content: "\f09b";
-    font-family: FontAwesome;
-    font-size: 25px;
-    color: #A3D0C3;
-    margin-right: 10px;
-  }
-}
-
-.welcome-list__link-inst {
-  &::before {
-    content: "\f16d";
-    font-family: FontAwesome;
-    font-size: 25px;
-    color: #A3D0C3;
-    margin-right: 10px;
-  }
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 75px;
   justify-content: center;
 
   &:nth-child(4n) {
@@ -245,6 +219,66 @@ img {
   font-family: 'Sriracha', cursive;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
   margin-right: 10px;
+}
+
+// ========================= FOTER =======================
+.footer {
+  padding-top: 50px;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+.footer-list {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: 'Kaushan Script';
+}
+
+.footer-list__item {
+  margin-bottom: 5px;
+}
+
+.footer-list__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #A3D0C3;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: color 150ms linear;
+
+  &:hover {
+    color: #7BA7AB;
+  }
+}
+
+.footer-list__link-git {
+  &::before {
+    content: "\f09b";
+    font-family: FontAwesome;
+    font-size: 25px;
+    color: #A3D0C3;
+    margin-right: 10px;
+  }
+}
+
+.footer-list__link-inst {
+  &::before {
+    content: "\f16d";
+    font-family: FontAwesome;
+    font-size: 25px;
+    color: #A3D0C3;
+    margin-right: 10px;
+  }
+}
+
+.about {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Kaushan Script';
+  opacity: 0.5;
+  text-shadow: 2px 2px 2px rgb(250, 250, 250);
 }
 
 .is-hidden {
