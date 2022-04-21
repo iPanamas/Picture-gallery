@@ -5,10 +5,6 @@ export async function getPictures(value, page) {
   const API_KEY = '26793641-c5f33c7d474ec2bb748918a6c';
   const settings = `?key=${API_KEY}&q=${value}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`;
 
-  try {
-    const response = await axios.get(`${url}${settings}`);
-    return response;
-  } catch (error) {
-    console.error(error);
-  }
+  const response = await axios.get(`${url}${settings}`);
+  return response;
 }
